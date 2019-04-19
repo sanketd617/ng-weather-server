@@ -7,6 +7,8 @@ http.createServer(function (request, response) {
         'Access-Control-Allow-Origin': 'http://3.89.93.88, http://localhost:4200, https://localhost:4200'
     });
 
+    console.log(request);
+
     var data = JSON.parse(fs.readFileSync('city.list.json'));
     var reqCity = request.url.substr(1);
 
