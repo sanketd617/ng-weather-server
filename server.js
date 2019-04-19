@@ -4,10 +4,9 @@ var fs = require("fs");
 http.createServer(function (request, response) {
     response.writeHead(200, {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://3.89.93.88, http://localhost:4200, https://localhost:4200'
+        'Access-Control-Allow-Origin': 'http://3.89.93.88'
     });
 
-    console.log(request.origin);
 
     var data = JSON.parse(fs.readFileSync('city.list.json'));
     var reqCity = request.url.substr(1);
